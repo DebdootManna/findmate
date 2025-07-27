@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "111649288667",
+    "project_id": "findmate-b278c",
+    "storage_bucket": "findmate-b278c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111649288667:android:4f209c35f2a80466a6b7fe",
+        "android_client_info": {
+          "package_name": "com.example.findmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFSAKQu6aPAHsL4WpWCmta-sLle2KdhnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
