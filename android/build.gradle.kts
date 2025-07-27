@@ -1,24 +1,32 @@
-allprojects {
+buildscript {
+    dependencies {
+        classpath("com.google.gms:google-services:4.3.15")
+    }
     repositories {
         google()
         mavenCentral()
     }
 }
 
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://plugins.gradle.org/m2/") }
+        maven { url = uri("https://jitpack.io") }
+        maven { url = uri("https://maven.transistorsoft.com/repository/background-fetch-release/") }
+    }
+}
+
 val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
+
 rootProject.layout.buildDirectory.value(newBuildDir)
 
 subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
-subprojects {
-    project.evaluationDependsOn(":app")
-}
 
-tasks.register<Delete>("clean") {
-    delete(rootProject.layout.buildDirectory)
-}
-dependencies {
-  classpath 'com.google.gms:google-services:4.3.15'
-}
+subprojects { project.evaluationDependsOn(":app") }
+
+tasks.register<Delete>("clean") { delete(rootProject.layout.buildDirectory) }
