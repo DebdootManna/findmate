@@ -11,10 +11,10 @@ class PingListener extends StatefulWidget {
   final String deviceId;
 
   const PingListener({
-    Key? key,
+    super.key,
     required this.child,
     required this.deviceId,
-  }) : super(key: key);
+  });
 
   @override
   State<PingListener> createState() => _PingListenerState();

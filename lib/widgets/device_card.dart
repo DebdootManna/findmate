@@ -12,13 +12,13 @@ class DeviceCard extends StatelessWidget {
   final VoidCallback onPing;
 
   const DeviceCard({
-    Key? key,
+    super.key,
     required this.deviceName,
     required this.lastSeen,
     required this.latitude,
     required this.longitude,
     required this.onPing,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

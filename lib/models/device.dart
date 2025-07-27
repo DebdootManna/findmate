@@ -1,6 +1,8 @@
-findmate/lib/models/device.dart
 /// Device model for FindMate app.
 /// Stores device info, location, and last seen timestamp.
+library;
+
+findmate/lib/models/device.dart
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
