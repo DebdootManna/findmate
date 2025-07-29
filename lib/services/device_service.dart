@@ -1,4 +1,3 @@
-findmate/lib/services/device_service.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -24,7 +23,7 @@ class DeviceService {
       _deviceId = const Uuid().v4();
     } else if (Platform.isAndroid) {
       final info = await deviceInfo.androidInfo;
-      _deviceId = info.id ?? info.androidId ?? const Uuid().v4();
+      _deviceId = info.serialNumber;
     } else if (Platform.isIOS) {
       final info = await deviceInfo.iosInfo;
       _deviceId = info.identifierForVendor ?? const Uuid().v4();
@@ -33,7 +32,7 @@ class DeviceService {
       _deviceId = info.systemGUID ?? const Uuid().v4();
     } else if (Platform.isWindows) {
       final info = await deviceInfo.windowsInfo;
-      _deviceId = info.deviceId ?? const Uuid().v4();
+      _deviceId = info.deviceId;
     } else if (Platform.isLinux) {
       final info = await deviceInfo.linuxInfo;
       _deviceId = info.machineId ?? const Uuid().v4();

@@ -1,4 +1,3 @@
-findmate/lib/widgets/privacy_message.dart
 import 'package:flutter/material.dart';
 
 /// A simple widget to display privacy information at the bottom of the app.

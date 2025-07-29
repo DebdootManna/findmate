@@ -1,10 +1,10 @@
-findmate/lib/services/location_service.dart
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:background_fetch/background_fetch.dart';
+export 'package:background_fetch/background_fetch.dart';
 
 /// Handles location permissions, fetching, and background updates.
 class LocationService {

@@ -1,4 +1,3 @@
-findmate/lib/firebase/firebase_options.dart
 // This file is a placeholder for Firebase initialization options.
 // Replace with your actual configuration using FlutterFire CLI.
 //
